@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h2>Quản Lý Tài Khoản Game</h2>
+            
+            <div class="form-group">
+                <h3>Thêm tài khoản mới</h3>
+                <input type="text" id="username" placeholder="Tên tài khoản" required>
+                <input type="number" id="balance" placeholder="Số dư ban đầu" required>
+                <button onclick="addAccount()">Thêm tài khoản</button>
+            </div>
+    
+            <div class="form-group">
+                <h3>Nạp tiền</h3>
+                <input type="text" id="rechargeUsername" placeholder="Tên tài khoản">
+                <input type="number" id="rechargeAmount" placeholder="Số tiền nạp">
+                <button onclick="rechargeAccount()">Nạp tiền</button>
+            </div>
+            
+            <div class="form-group">
+                <h3>Tìm kiếm tài khoản</h3>
+                <input type="text" id="searchInput" placeholder="Nhập tên tài khoản để tìm" onkeyup="searchAccount()">
+            </div>
+            
+            <table id="accountTable">
+                <thead>
+                    <tr>
+                        <th>Tên tài khoản</th>
+                        <th>Số dư (VNĐ)</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="accountList"></tbody>
+            </table>
+    </main>
+</body>
+</html>
